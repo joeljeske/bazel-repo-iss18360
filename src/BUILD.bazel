@@ -1,0 +1,14 @@
+load("@rules_java//java:defs.bzl", "java_library")
+
+java_library(
+    name = "lib_a",
+    srcs = ["ClassA.java"],
+    deps = [
+        ":lib_b",
+    ],
+)
+
+java_library(
+    name = "lib_b",
+    srcs = ["ClassB.java"],
+)
